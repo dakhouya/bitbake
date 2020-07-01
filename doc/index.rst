@@ -9,3 +9,4 @@ Welcome to Bitbake documentation!
 .. toctree::
    :maxdepth: 1
 
+   bitbake-user-manual/bitbake-user-manual
