@@ -23,14 +23,13 @@ overview of their function and contents.
       not appear in the BitBake glossary. These other variables are
       variables used in systems that use BitBake.
 
-`A <#var-bb-ASSUME_PROVIDED>`__ `B <#var-bb-B>`__ `C <#var-bb-CACHE>`__
-`D <#var-bb-DEFAULT_PREFERENCE>`__ `E <#var-bb-EXCLUDE_FROM_WORLD>`__
-`F <#var-bb-FAKEROOT>`__ `G <#var-bb-GITDIR>`__ `H <#var-bb-HGDIR>`__
-`I <#var-bb-INHERIT>`__ `L <#var-bb-LAYERDEPENDS>`__
-`M <#var-bb-MIRRORS>`__ `O <#var-bb-OVERRIDES>`__ `P <#var-bb-P4DIR>`__
-`R <#var-bb-RDEPENDS>`__ `S <#var-bb-SECTION>`__ `T <#var-bb-T>`__
+:ref:`A<A>` :ref:`B<B>` :ref:`C<C>` :ref:`D<D>` :ref:`E<E>` :ref:`F<F>`
+:ref:`G<G>` :ref:`H<H>` :ref:`I<I>` :ref:`L<L>` :ref:`M<M>` :ref:`O<O>`
+:ref:`P<P>` :ref:`R<R>` :ref:`S<S>` :ref:`T<T>`
 
 .. glossary::
+
+.. _A:
 
    ASSUME_PROVIDED
       Lists recipe names (```PN`` <#var-bb-PN>`__ values) BitBake does not
@@ -41,6 +40,8 @@ overview of their function and contents.
       tools that should not be built. An example is ``git-native``, which
       when specified allows for the Git binary from the host to be used
       rather than building ``git-native``.
+
+.. _B:
 
    B
       The directory in which BitBake executes functions during a recipe's
@@ -710,6 +711,8 @@ overview of their function and contents.
       The directory in which files checked out of a Bazaar system are
       stored.
 
+.. _C:
+
    CACHE
       Specifies the directory BitBake uses to store a cache of the metadata
       so it does not need to be parsed every time BitBake is started.
@@ -717,6 +720,8 @@ overview of their function and contents.
    CVSDIR
       The directory in which files checked out under the CVS system are
       stored.
+
+.. _D:
 
    DEFAULT_PREFERENCE
       Specifies a weak bias for recipe selection priority.
@@ -761,6 +766,8 @@ overview of their function and contents.
       ```BB_GENERATE_MIRROR_TARBALLS`` <#var-bb-BB_GENERATE_MIRROR_TARBALLS>`__
       variable.
 
+.. _E:
+
    EXCLUDE_FROM_WORLD
       Directs BitBake to exclude a recipe from world builds (i.e.
       ``bitbake world``). During world builds, BitBake locates, parses and
@@ -779,6 +786,8 @@ overview of their function and contents.
          EXCLUDE_FROM_WORLD
          only ensures that the recipe is not explicitly added to the list
          of build targets in a world build.
+
+.. _F:
 
    FAKEROOT
       Contains the command to use when running a shell script in a fakeroot
@@ -829,9 +838,13 @@ overview of their function and contents.
       environment variable. The value is a colon-separated list of
       directories that are searched left-to-right in order.
 
+.. _G:
+
    GITDIR
       The directory in which a local copy of a Git repository is stored
       when it is cloned.
+
+.. _H:
 
    HGDIR
       The directory in which files checked out of a Mercurial system are
@@ -840,6 +853,8 @@ overview of their function and contents.
    HOMEPAGE
       Website where more information about the software the recipe is
       building can be found.
+
+.. _I:
 
    INHERIT
       Causes the named class or classes to be inherited globally. Anonymous
@@ -850,6 +865,8 @@ overview of their function and contents.
       For more information on ``INHERIT``, see the "```INHERIT``
       Configuration Directive <#inherit-configuration-directive>`__"
       section.
+
+.. _L:
 
    LAYERDEPENDS
       Lists the layers, separated by spaces, upon which this recipe
@@ -890,6 +907,8 @@ overview of their function and contents.
    LICENSE
       The list of source licenses for the recipe.
 
+.. _M:
+
    MIRRORS
       Specifies additional paths from which BitBake gets source code. When
       the build system searches for source code, it first tries the local
@@ -911,6 +930,8 @@ overview of their function and contents.
       To use the variable, list provider names (e.g. recipe names,
       ``virtual/kernel``, and so forth).
 
+.. _O:
+
    OVERRIDES
       BitBake uses ``OVERRIDES`` to control what variables are overridden
       after BitBake parses recipes and configuration files.
@@ -919,6 +940,8 @@ overview of their function and contents.
       machine architectures: OVERRIDES = "arm:x86:mips:powerpc" You can
       find information on how to use ``OVERRIDES`` in the "`Conditional
       Syntax (Overrides) <#conditional-syntax-overrides>`__" section.
+
+.. _P:
 
    P4DIR
       The directory in which a local copy of a Perforce depot is stored
@@ -1058,6 +1081,8 @@ overview of their function and contents.
    PV
       The version of the recipe.
 
+.. _R:
+
    RDEPENDS
       Lists a package's runtime dependencies (i.e. other packages) that
       must be installed in order for the built package to run correctly. If
@@ -1113,6 +1138,8 @@ overview of their function and contents.
       = < > <= >= For example, the following sets up a recommend on version
       1.2 or greater of the package ``foo``: RRECOMMENDS_${PN} = "foo (>=
       1.2)"
+
+.. _S:
 
    SECTION
       The section in which packages should be categorized.
@@ -1226,6 +1253,8 @@ overview of their function and contents.
    SVNDIR
       The directory in which files checked out of a Subversion system are
       stored.
+
+.. _T:
 
    T
       Points to a directory were BitBake places temporary files, which
